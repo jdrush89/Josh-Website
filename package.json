@@ -1,0 +1,31 @@
+{
+  "name": "JoshWebsite",
+  "version": "1.0.0",
+  "description": "A website for Joshua Rush",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "browserify": "^10.2.6",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jsxhint": "^0.6.0",
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.23.7"
+  },
+  "devDependencies": {
+    "envify": "^3.4.0",
+    "grunt-browserify": "^3.8.0",
+    "grunt-env": "^0.4.4",
+    "grunt-jsx": "^0.1.8",
+    "grunt-react": "^0.12.2",
+    "react-router": "^0.13.3",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Joshua Rush",
+  "license": "MIT"
+}

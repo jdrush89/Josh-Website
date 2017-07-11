@@ -1,0 +1,55 @@
+.josh-background {
+    background-image: url("../assets/car.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 1200px;
+    width: 100%;
+    position: fixed;
+    z-index: -999999;
+    top: 0px;
+}
+
+.josh-navbar {
+  margin-bottom: 0px;
+}
+
+.name-header {
+  margin-left: 40px;
+  font-size: 50px;
+  font-family: cursive;
+}
+
+.home-description {
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 40px;
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 24px 3px white;
+}
+
+.projects {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 24px 3px black;
+  margin: 5% auto 2%;
+  width: 820px;
+}
+
+.projects-body {
+  color: white;
+  margin: 16px;
+  font-size: large;
+}
+
+.screenshot {
+  width: 780px;
+  margin-bottom: 20px;
+}
+
+.volume-screenshot {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-right: 62px;
+}
