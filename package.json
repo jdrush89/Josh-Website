@@ -10,8 +10,9 @@
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jsxhint": "^0.6.0",
-    "react": "^0.13.3",
-    "react-bootstrap": "^0.23.7"
+    "react": "^0.14.9",
+    "react-bootstrap": "^0.31.0",
+    "react-transition-group": "^1.2.0"
   },
   "devDependencies": {
     "envify": "^3.4.0",
@@ -19,6 +20,7 @@
     "grunt-env": "^0.4.4",
     "grunt-jsx": "^0.1.8",
     "grunt-react": "^0.12.2",
+    "react-dom": "^0.14.9",
     "react-router": "^0.13.3",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1"

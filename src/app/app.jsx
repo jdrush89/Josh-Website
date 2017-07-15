@@ -1,8 +1,10 @@
 var React = require('react');
 var Router = require('react-router');
 var ReactBootstrap = require('react-bootstrap');
+var CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup')
 require('src/components/nav_bar');
 
+var Redirect = Router.Redirect;
 var Route = Router.Route;
 var DefaultRoute = Router.DefaultRoute;
 var RouteHandler = Router.RouteHandler;
@@ -25,14 +27,25 @@ var HomePage = React.createClass({
     return (
       <div>
         <div className="josh-background"></div>
-        <h1 className="name-header">Joshua Rush</h1>
-          <div className="home-description">
-            { "Hi, I'm Josh.  I'm a full stack web developer at Rackspace. " +
-              "I love bringing interfaces to life from scratch and building software " +
-              "that makes it easy for users to accomplish their goals." }
-          </div>
+          <CSSTransitionGroup
+            transitionName="fade"
+            transitionAppear={true}
+            transitionAppearTimeout={700}
+            transitionEnter={false}
+            transitionLeave={false}>
+            <h1 className="name-header">Joshua Rush</h1>
+            <div className="home-description">
+              { "Hi, I'm Josh.  I'm a full stack web developer at Rackspace. " +
+                "I love bringing interfaces to life from scratch and building software " +
+                "that makes it easy for users to accomplish their goals." }
+            </div>
+          </CSSTransitionGroup>
       </div>
     );
+  },
+
+  componentDidMount: function () {
+    document.getElementById('fade-container').style.opacity='1';
   }
 });
 
@@ -41,6 +54,12 @@ var ProjectsPage = React.createClass({
     return (
       <div>
         <div className="josh-background"></div>
+        <CSSTransitionGroup
+          transitionName="fade"
+          transitionAppear={true}
+          transitionAppearTimeout={700}
+          transitionEnter={false}
+          transitionLeave={false}>
           <div className="content-container">
             <div className="content-body">
               <h1 className="section-header">Projects</h1>
@@ -119,6 +138,7 @@ var ProjectsPage = React.createClass({
               </div>
             </div>
           </div>
+        </CSSTransitionGroup>
       </div>
     );
   }
@@ -129,16 +149,23 @@ var ContactPage = React.createClass({
     return (
       <div>
         <div className="josh-background"></div>
-        <div className="content-container">
-          <div className="content-body">
-            <h1 className="section-header">Contact</h1>
-            <div className="contact-link-container">
-              <a className="subsection-header contact-link" href="mailto:jdrush89@gmail.com">Email</a>
-              <a className="subsection-header contact-link" href="https://www.linkedin.com/in/joshua-rush-49aa21126/">Linked In</a>
-              <a className="subsection-header contact-link" href="https://github.com/jdrush89">Github</a>
+        <CSSTransitionGroup
+          transitionName="fade"
+          transitionAppear={true}
+          transitionAppearTimeout={700}
+          transitionEnter={false}
+          transitionLeave={false}>
+          <div className="content-container">
+            <div className="content-body">
+              <h1 className="section-header">Contact</h1>
+              <div className="contact-link-container">
+                <a className="subsection-header contact-link" href="mailto:jdrush89@gmail.com">Email</a>
+                <a className="subsection-header contact-link" href="https://www.linkedin.com/in/joshua-rush-49aa21126/">Linked In</a>
+                <a className="subsection-header contact-link" href="https://github.com/jdrush89">Github</a>
+              </div>
             </div>
           </div>
-        </div>
+        </CSSTransitionGroup>
       </div>
     );
   }
@@ -146,7 +173,8 @@ var ContactPage = React.createClass({
 
 var routes = (
   <Route handler={App} path='/'>
-    <DefaultRoute handler={HomePage}/>
+    <Redirect from="/" to="home"/>
+    <Route name="home" path="home" handler={HomePage}/>
     <Route name="projects" path="projects" handler={ProjectsPage}/>
     <Route name="contact" path="contact" handler={ContactPage}/>
   </Route>

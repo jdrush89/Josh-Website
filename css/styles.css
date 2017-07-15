@@ -99,3 +99,17 @@ a:hover {
 .contact-link-container {
   margin-left: 10%;
 }
+
+.fade-appear {
+  opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+/* override bootstrap style */
+.container {
+  margin-left: 10px;
+}

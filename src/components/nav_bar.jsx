@@ -11,9 +11,9 @@ window.MainNavBar = React.createClass({
 
   render: function () {
     return (
-      <Navbar inverse className="josh-navbar">
+      <Navbar inverse>
         <Nav>
-          <NavItem href='#'>Home</NavItem>
+          <NavItem href='#' onClick={function (e) {this._clickTransition(e, 'home')}.bind(this)}>Home</NavItem>
           <NavItem href='#' onClick={function (e) {this._clickTransition(e, 'projects')}.bind(this)}>Projects</NavItem>
           <NavItem href='#' onClick={function (e) {this._clickTransition(e, 'contact')}.bind(this)}>Contact</NavItem>
           <NavItem href='Resume.pdf'>Resume</NavItem>
