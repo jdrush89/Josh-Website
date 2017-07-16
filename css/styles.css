@@ -14,6 +14,7 @@ a:hover {
     background-image: url("../assets/car.jpg");
     background-color: #cccccc;
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 1200px;
     width: 100%;
     position: fixed;
