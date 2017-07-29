@@ -42,10 +42,6 @@ var HomePage = React.createClass({
           </CSSTransitionGroup>
       </div>
     );
-  },
-
-  componentDidMount: function () {
-    document.getElementById('fade-container').style.opacity='1';
   }
 });
 
