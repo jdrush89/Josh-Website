@@ -35,8 +35,8 @@ var HomePage = React.createClass({
             transitionLeave={false}>
             <h1 className="name-header">Joshua Rush</h1>
             <div className="home-description">
-              { "Hi, I'm Josh.  I'm a full stack web developer at Rackspace. " +
-                "I love bringing interfaces to life from scratch and building software " +
+              { "Hi, I'm Josh.  I'm a full stack web developer at GitHub. " +
+                "I love bringing interfaces to life from scratch and building accessible software " +
                 "that makes it easy for users to accomplish their goals." }
             </div>
           </CSSTransitionGroup>
@@ -59,6 +59,55 @@ var ProjectsPage = React.createClass({
           <div className="content-container">
             <div className="content-body">
               <h1 className="section-header">Projects</h1>
+              <div className="project">
+                <h3 className="subsection-header">GitHub Copilot Chat</h3>
+                <img className="screenshot" src="assets/copilot-chat.png"></img>
+                <p>
+                  { "I worked on the React UI for GitHub Copilot, " +
+                    "an AI assistant for code development.  " +
+                    "I integrated copilot into the GitHub code view, allowing the " +
+                    "attachment of code snippets, files, repos, and doc sets. " +
+                    "I'm working on integrating copilot into the pull request experience " +
+                    "to allow turning natural language code suggestions into code that can be iterated on and " +
+                    "applied back to the PR."
+}
+                </p>
+              </div>
+              <div className="project">
+                <h3 className="subsection-header">GitHub Repos</h3>
+                <img className="screenshot" src="assets/code-nav.png"></img>
+                <p>
+                  { "I worked on the Repos team at " }
+                  <a href="https://github.com/">github.com</a>
+                  { " which owns the code search, navigation, and editing experience. " +
+                    " I updated the UI from Rails to React/Typescript, " + 
+                    " adding a file tree and code navigation tool such as " +
+                    " symbol reference and defintion searching."}
+                </p>
+              </div>
+              <div className="project">
+                <h3 className="subsection-header">Azure Devops</h3>
+                <img className="screenshot" src="assets/azure-devops-repos.png"></img>
+                <img className="screenshot" src="assets/azure-devops-boards.png"></img>
+                <p>
+                  { "After developing the shared Azure Devops UI component library, I worked with the repos and boards teams "
+                  + "to rewrite their UI using the new react components. I also owned the extension management service. "
+                  + "Azure Devops is highly extensible by third party developers. I supported the " }
+                  <a href="https://github.com/Microsoft/azure-devops-extension-sdk">extension sdk</a>
+                  { " and " }
+                  <a href="https://github.com/Microsoft/azure-devops-extension-api">extension api</a>
+                  { " by meeting with extension developers and adding features they requested." }
+                </p>
+              </div>
+              <div className="project">
+                <h3 className="subsection-header">Azure Devops UI</h3>
+                <img className="screenshot" src="assets/azure-devops-ui.png"></img>
+                <p>
+                  <a href="https://developer.microsoft.com/en-us/azure-devops/components">Azure Devops UI</a>
+                  { " is a react component library used to build the UI of Azure Devops. " + 
+                    "I developed many of the components to be highly configurable, performant, and accessbile." }
+                </p>
+              </div>
               <div className="project">
                 <h3 className="subsection-header">MyCloud</h3>
                 <img className="screenshot" src="assets/reach.jpeg"></img>
